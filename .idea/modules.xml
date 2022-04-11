@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Pattern-Matching-and-Machine-Learning-for-Audio-Signal-Processing.iml" filepath="$PROJECT_DIR$/.idea/Pattern-Matching-and-Machine-Learning-for-Audio-Signal-Processing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TemporalGraph/.idea/TemporalGraph.iml" filepath="$PROJECT_DIR$/../TemporalGraph/.idea/TemporalGraph.iml" />
+    </modules>
+  </component>
+</project>
