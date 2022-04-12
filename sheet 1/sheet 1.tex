@@ -21,7 +21,6 @@
 \newtheorem{definition}{Definition}
 \newtheorem{theorem}{Theorem}
 \usepackage{blindtext}
-\usepackage[ngerman]{babel}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{graphicx}
@@ -97,6 +96,12 @@ $sin(z)^{2} + cos(z)^{2} = \frac{1}{4}4e^{iz}e^{-iz} = 1$\\
 %                         Task 1.2
 % --------------------------------------------------------------
 \section*{Task 1.2}
-If we look at both spectrograms, we see that there are no differences between the two waves. This is due to the fact that a cosine wave is only a phase-shifted sine wave. Therefore, both time-frequency representations are the same.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{Spectrograms.png}
+    \caption{time-frequency representations for the sine wave (left) and cosine wave (right)}
+    \label{abb}
+\end{figure}
+If we look at both spectrograms in Figure \ref{abb}, we see that there are no differences between the two waves. This is due to the fact that a cosine wave is only a phase-shifted sine wave. Therefore, both time-frequency representations are the same.
 
 \end{document}
