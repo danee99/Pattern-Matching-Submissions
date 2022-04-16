@@ -29,7 +29,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newtheorem{thm}{Theorem}
-\newcommand\myeq{\stackrel{\mathclap{\normalfont\mbox{IV}}}{=}}
+\newcommand\myeq{\stackrel{\mathclap{\normalfont\mbox{IH}}}{=}}
 \usepackage{mathtools}
 \usepackage{amsmath}
  
@@ -47,12 +47,28 @@
 %                         Task 2.1
 % --------------------------------------------------------------
 \section*{Task 2.1}
-\begin{thm} Let $1 \neq q \in \C$ then for all positive integers $n$: $\sum^{N-1}_{n=0}q^n = \frac{1-q^N}{1-q}$\end{thm}
+\begin{thm} Let $1 \neq q \in \C$, then for all positive integers $n$: $\sum^{N-1}_{n=0}q^n = \frac{1-q^N}{1-q}$\end{thm}
 \begin{proof}
 Base Case $\left(N=1\right)$
-$$\sum^{1-1}_{n=0}q^n = \sum^{0}_{n=0}q^n = q^0 = 1 = \frac{1-q}{1-q} = \frac{1-q^1}{1-q}$$
+$$\sum^{1-1}_{n=0}q^n 
+= \sum^{0}_{n=0}q^n 
+= q^0 
+= 1 
+= \frac{1-q}{1-q} 
+= \frac{1-q^1}{1-q}$$
+
+Induction Hypothesis: Assume that for a given  $n$ the following statement holds:
+$$\sum^{N-1}_{n=0}q^n = \frac{1-q^N}{1-q}$$
+
 Inductive Step $\left(N \longrightarrow N+1\right)$
-$$\sum^{N+1-1}_{n=0}q^n = \sum^{N}_{n=0}q^n = \sum^{N-1}_{n=0}q^n + q^N \myeq \frac{1-q^N}{1-q} + q^N = \frac{1-q^N}{1-q} + \frac{q^N\cdot (1-q)}{1-q} = \frac{1-q^N}{1-q} + \frac{q^N-q^{N+1}}{1-q} = \frac{1-q^N+q^N-q^{N+1}}{1-q} = \frac{1-q^{N+1}}{1-q}$$
+\begin{align*} 
+\sum^{N+1-1}_{n=0}q^n &= \sum^{N}_{n=0}q^n = \sum^{N-1}_{n=0}q^n + q^N \\
+&\myeq \frac{1-q^N}{1-q} + q^N \\
+&= \frac{1-q^N}{1-q} + \frac{q^N\cdot (1-q)}{1-q} \\
+&= \frac{1-q^N}{1-q} + \frac{q^N-q^{N+1}}{1-q} \\
+&= \frac{1-q^N+q^N-q^{N+1}}{1-q}\\
+&= \frac{1-q^{N+1}}{1-q}
+\end{align*}
 \end{proof}
 
  
