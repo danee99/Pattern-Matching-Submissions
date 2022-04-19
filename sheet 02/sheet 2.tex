@@ -21,7 +21,7 @@
 \newtheorem{definition}{Definition}
 \newtheorem{theorem}{Theorem}
 \usepackage{blindtext}
-\usepackage[margin=1in]{geometry} 
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{graphicx}
 \newcommand{\N}{\mathbb{N}}
@@ -32,7 +32,7 @@
 \newcommand\myeq{\stackrel{\mathclap{\normalfont\mbox{IH}}}{=}}
 \usepackage{mathtools}
 \usepackage{amsmath}
- 
+
 \begin{document}
 % --------------------------------------------------------------
 %                         Title Page
@@ -50,18 +50,18 @@
 \begin{thm} Let $1 \neq q \in \C$, then for all positive integers $n$: $\sum^{N-1}_{n=0}q^n = \frac{1-q^N}{1-q}$\end{thm}
 \begin{proof}
 Base Case $\left(N=1\right)$
-$$\sum^{1-1}_{n=0}q^n 
-= \sum^{0}_{n=0}q^n 
-= q^0 
-= 1 
-= \frac{1-q}{1-q} 
+$$\sum^{1-1}_{n=0}q^n
+= \sum^{0}_{n=0}q^n
+= q^0
+= 1
+= \frac{1-q}{1-q}
 = \frac{1-q^1}{1-q}$$
 
 Induction Hypothesis: Assume that for a given  $N$ the following statement holds:
 $$\sum^{N-1}_{n=0}q^n = \frac{1-q^N}{1-q}$$
 
 Inductive Step $\left(N \longrightarrow N+1\right)$
-\begin{align*} 
+\begin{align*}
 \sum^{N+1-1}_{n=0}q^n &= \sum^{N}_{n=0}q^n = \sum^{N-1}_{n=0}q^n + q^N \\
 &\myeq \frac{1-q^N}{1-q} + q^N \\
 &= \frac{1-q^N}{1-q} + \frac{q^N\cdot (1-q)}{1-q} \\
@@ -71,5 +71,31 @@ Inductive Step $\left(N \longrightarrow N+1\right)$
 \end{align*}
 \end{proof}
 
- 
+% --------------------------------------------------------------
+%                         Task 2.3
+% --------------------------------------------------------------
+ \section*{Task 2.3}
+ \begin{thm} Let $B = b_0,...,b_{N-1}$ denote an ON-basis of $\C^{N}$. Every ~$x \in \C^N$ has the following Fourier representation with respect to this ON-basis:
+ $$x = \sum_{k=0}^{N-1} \langle x | b_k \rangle b_k$$.\end{thm}
+ \begin{proof}
+   Since B is a basis of $\C^N$, every vector $x \in \C^N$ can be written as follows:
+   \begin{align*}
+     x &= x_0 \cdot b_0 + x_1 \cdot b_1 + ... + x_{N-1} \cdot b_{N-1}\\
+     &= \sum_{k=0}^{N-1}x_k \cdot b_k
+   \end{align*}
+   additionally for x_i, because ~$\langle b_i | b_i \rangle = 1$  for normalized vectors  and ~$\langle b_j | b_i \rangle = 0$ for $i,j \in \{0,...,N-1\} \wedge i \neq j$, stands:
+   \begin{align*}
+     x_i &= \langle b_i | b_i \rangle x_i = \langle b_i | b_i \rangle x_i + \sum_{k=0 \wedge k \neq i}^{N-1}\langle b_i | b_k \rangle x_k = 
+      \sum_{k=0}^{N-1}x_k \cdot \langle b_i | b_k \rangle \\
+     &= \sum_{k=0}^{N-1}\langle b_i | x_k \cdot b_k \rangle = \left\langle  b_i \middle | \sum_{k=0}^{N-1} x_k \cdot b_k \right\rangle
+   \end{align*}
+   And with the way to write a vector $x \in \C^N$ we get:
+   \begin{align*}
+     x_i = \langle b_i | x \rangle
+   \end{align*}
+   So all in all, we get for every vector $x \in \C^N$ the following representation:
+   \begin{align*}
+     x = \sum_{k=0}^{N-1}x_k \cdot b_k =  \sum_{k=0}^{N-1} \langle x | b_k \rangle b_k
+   \end{align*}
+ \end{proof}
 \end{document}
