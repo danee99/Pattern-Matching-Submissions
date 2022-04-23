@@ -41,7 +41,7 @@
 \maketitle
 
 % --------------------------------------------------------------
-%                         Task 1.1
+%                         Task 3.1
 % --------------------------------------------------------------
 \section*{Task 3.1}
 \begin{itemize}
@@ -73,5 +73,29 @@
           \label{abb}
       \end{figure}
 \end{itemize}
+
+% --------------------------------------------------------------
+%                         Task 3.2
+% --------------------------------------------------------------
+\section*{Task 3.2}
+The spectrum $X$ is defined as $X:=(X(0),X(1),...,X(N-1))^\top \in \mathbb{C}^{N}$.\\\\
+$X(k) = \sum_{n=0}^{N-1} x(n) \cdot e^{-2\pi ikn/N}$\\\\
+The vector $x \in \mathbb{C}^{4}$ is given as $x:=[-2,1,-1,3]^\top$\\\\
+Therefore $N=4$ and\\ 
+$x(0)=-2$\\
+$x(1)=1$\\
+$x(2)=-1$\\ 
+$x(3)=3$\\
+Now we can calculate the spectrum $X$ as follows:\\\\
+$X(0) = \sum_{n=0}^{3} x(n) \cdot e^{-2\pi i \cdot 0 \cdot n/4} = \sum_{n=0}^{3} x(n) = -2+1-1+3 = 1$\\\\
+$X(1) = \sum_{n=0}^{3} x(n) \cdot e^{-2\pi i \cdot 1 \cdot n/4} = x(0) \cdot e^{-2\pi i \cdot 0/4} + x(1) \cdot e^{-2\pi i \cdot 1/4} + x(2) \cdot e^{-2\pi i \cdot 2/4} + x(3) \cdot e^{-2\pi i \cdot 3/4}$\\\\
+$ = 1 \cdot (-2) - i \cdot 1 + 1 + i \cdot 3 = -1 + 2i$\\\\
+$X(2) = \sum_{n=0}^{3} x(n) \cdot e^{-2\pi i \cdot 2 \cdot n/4} = $\\\\
+$X(3) = \sum_{n=0}^{3} x(n) \cdot e^{-2\pi i \cdot 3 \cdot n/4} = $\\\\\\
+The spectrum is $X=(1, -1+2i, X(3), X(4))^\top$.
+% --------------------------------------------------------------
+%                         Task 3.3
+% --------------------------------------------------------------
+ \section*{Task 3.3}
 
 \end{document}
