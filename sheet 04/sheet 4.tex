@@ -22,30 +22,46 @@
 \newtheorem{theorem}{Theorem}
 \usepackage{blindtext}
 \usepackage[ngerman]{babel}
-\usepackage[margin=1in]{geometry} 
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{graphicx}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
- 
+
 \begin{document}
 % --------------------------------------------------------------
 %                         Title Page
 % --------------------------------------------------------------
-\title{Solutions for Sheet 1}
+\title{Solutions for Sheet 4}
 \author{Raphael Wude, Martin Brückmann, Claude Jordan, Daniel Degenstein\\ \\
 \textsc{Pattern Matching and Machine Learning} \\
 \textsc{for Audio Signal Processing}}
 \maketitle
 
 % --------------------------------------------------------------
-%                         Task 1.1
+%                         Task 4.1
 % --------------------------------------------------------------
-\section*{Task 1.1}
-\begin{itemize}
-    \item[(a)]
-\end{itemize}
- 
+\section*{Task 4.1}
+\subsection*{(a)}
+$X_{0}=(\omega^{0\cdot0}_{N},...,\omega^{0\cdot(N-1)}_{N})\cdot x$\\\\
+$=\sum^{N-1}_{k=0} \omega^{0}_{N}\cdot x_{k}$\\\\
+$=\sum^{N-1}_{k=0} x_{k} ~~~\Rightarrow X_{0} \in \mathbb{R}$\\\\\\
+$X_{M}=(\omega^{0\cdot M}_{N},...,\omega^{(N-1)\cdot M}_{N})\cdot x$\\\\
+$=\sum^{N-1}_{k=0} \omega^{kM}_{N}\cdot x_{k}$\\\\
+$=\sum^{N-1}_{k=0} exp(\frac{-2\pi iM}{2M})^{k}\cdot x_{k}$\\\\
+$=\sum^{N-1}_{k=0} exp(-\pi ik)\cdot x_{k}$\\\\
+$=\sum^{N-1}_{k=0} (-1)^{k}\cdot x_{k} ~~~\Rightarrow X_{M} \in \mathbb{R}$\\\\\\
+$X_{N-k}=\sum^{N-1}_{l=0} \omega^{l(N-k)}_{N}\cdot x_{l}$\\\\
+$=\sum^{N-1}_{l=0} exp(\frac{-2\pi il(N-k)}{N})\cdot x_{l}$\\\\
+$=\sum^{N-1}_{l=0} exp(\frac{2\pi ilk}{N}-2\pi ilN)\cdot x_{l}$\\\\
+$=\sum^{N-1}_{l=0} exp(\frac{2\pi ilk}{N})\cdot exp(2\pi ilN)\cdot x_{l}$\\\\
+$=\sum^{N-1}_{l=0} \overline{exp(\frac{-2\pi ilk}{N})\cdot x_{l}}$\\\\
+$=\sum^{N-1}_{l=0} \overline{\omega^{lk}_{N}\cdot x_{l}}$\\\\
+$=\overline{X_{k}}$
+
+\subsection*{(b)}
+
+
 \end{document}
