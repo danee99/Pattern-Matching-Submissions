@@ -64,4 +64,41 @@ $=\overline{X_{k}}$
 \subsection*{(b)}
 
 
+\section*{Task 4.2}
+\subsection*{(a)}
+For A we got:
+\begin{align*}
+A = \text{DFT}_N \cdot a = \text{DFT}_N \cdot \left(sin\left(\frac{2\pi 4 k}{N}\right) \right)
+\end{align*}
+And with Eulers Formula:
+\begin{align*}
+  a &= sin\left(\frac{2\pi 4 k}{N}\right = \frac{1}{2i} \cdot \left(e^{\frac{2\pi 4 ki}{N}}-e^{\frac{- 2\pi 4 ki}{N}}\right)\\
+  &= \frac{1}{2i} \cdot (u_4 - u_{N-4})
+\end{align*}
+With $\langle u_k|u_l \rangle =N \cdot \delta_{k,l}$ we get:
+\begin{align*}
+  |a(k)| = \frac{N}{2} \cdot w_k
+\end{align*}
+with $w_4 = w_{N-4} = 1$ and else $w_k=0$.\\
+That means, for $A= \text{DFT}_N \cdot a$ the only nonzero entries of the matrix A are at $k=4$ and $k=N-4=508$. For this entries we get:
+\begin{align*}
+  A(k) = \text{DFT}_N(k) \cdot \frac{N}{2}
+\end{align*}
+
+\subsection*{(b)}
+We know, that $|A(k)|> 2 \theta$ for all nonzero $A(k)$ and $R(k)\leq \theta$. So $|A+R|>\theta$ for all $k\in \{0,...,N-1\}$. So for $B_\theta$ we get:
+\begin{align*}
+  B_{\theta}(k) = \big\{ \begin{array}{l} A(k) + R(k), \text{for} k=4 \wedge k=508 \\ 0, \text{else} \end{array}
+\end{align*}
+If we now define us a new $R_\theta$ with:
+\begin{align*}
+  R_{\theta}(k) = \big\{ \begin{array}{l} R(k), \text{for} k=4 \wedge k=508 \\ 0, \text{else} \end{array}
+\end{align*}
+we can write $B_\theta=A + R_\theta$\\
+So for $\tilde{a}$ and $\tilde{a}-a$  we get:
+\begin{align*}
+  \tilde{a} &= \text{DFT}_n^{-1} B_\theta = \text{DFT}_n^{-1} (A + R_\theta) = \text{DFT}_n^{-1} A + \text{DFT}_n^{-1} R_\theta = a + \text{DFT}_n^{-1} R_\theta \\
+  \tilde{a}-a &= a + \text{DFT}_n^{-1} R_\theta - a = \text{DFT}_n^{-1} R_\theta
+\end{align*}
+
 \end{document}
