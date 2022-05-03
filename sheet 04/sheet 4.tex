@@ -25,6 +25,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{graphicx}
+\usepackage{svg}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
@@ -100,5 +101,32 @@ So for $\tilde{a}$ and $\tilde{a}-a$  we get:
   \tilde{a} &= \text{DFT}_n^{-1} B_\theta = \text{DFT}_n^{-1} (A + R_\theta) = \text{DFT}_n^{-1} A + \text{DFT}_n^{-1} R_\theta = a + \text{DFT}_n^{-1} R_\theta \\
   \tilde{a}-a &= a + \text{DFT}_n^{-1} R_\theta - a = \text{DFT}_n^{-1} R_\theta
 \end{align*}
+
+\section*{Task 4.3}
+
+\begin{figure}[h]
+  \centering
+  \fontsize{7pt}{7pt}\selectfont
+  \includesvg[width=0.8\textwidth, height=0.8\textheight]{a}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \fontsize{7pt}{7pt}\selectfont
+  \includesvg[width=0.8\textwidth, height=0.8\textheight]{b}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \fontsize{7pt}{7pt}\selectfont
+  \includesvg[width=0.8\textwidth, height=0.8\textheight]{atilde}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \fontsize{7pt}{7pt}\selectfont
+  \includesvg[width=0.8\textwidth, height=0.8\textheight]{atilde_minus_a}
+\end{figure}
+
 
 \end{document}
