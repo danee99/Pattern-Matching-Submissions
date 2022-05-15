@@ -95,4 +95,58 @@ is given by
     &= \frac{1}{3} (1 + e^{-2 \pi i \omega} + e^{-4 \pi i \omega})
 \end{align*}
 
+\section*{Task 5.3}
+
+\subsection*{(a)}
+Write $h$ as a vector:
+\[
+\begin{pmatrix}
+h(k_{1})\\
+h(k_{2})\\
+\vdots\\
+h(k_{n})
+\end{pmatrix}
+\]
+Now write $x$ as a matrix:
+\[
+\begin{pmatrix}
+x(1-k_{1}) & x(1-k_{2}) & \cdots & x(1-k_{n})\\
+x(2-k_{1}) & x(2-k_{2}) & \cdots & x(2-k_{n})\\
+\vdots & \vdots & \ddots & \vdots\\
+x(n-k_{1}) & x(n-k_{2}) & \cdots & x(n-k_{n})
+\end{pmatrix}
+\]
+\\\\Now we can write $C_{h}[x]$ as a matrix $\times$ vector product:
+\[
+\begin{pmatrix}
+x(1-k_{1}) & x(1-k_{2}) & \cdots & x(1-k_{n})\\
+x(2-k_{1}) & x(2-k_{2}) & \cdots & x(2-k_{n})\\
+\vdots & \vdots & \ddots & \vdots\\
+x(n-k_{1}) & x(n-k_{2}) & \cdots & x(n-k_{n})
+\end{pmatrix} \times \begin{pmatrix}
+h(k_{1})\\
+h(k_{2})\\
+\vdots\\
+h(k_{n})
+\end{pmatrix}
+\]
+\[
+~~~~~~~~~~~= \begin{pmatrix}
+x(1-k_{1}) \cdot h(k_{1}) + x(1-k_{2}) \cdot h(k_{2}) + \ldots + x(1-k_{n}) \cdot h(k_{n})\\
+x(2-k_{1}) \cdot h(k_{1}) + x(2-k_{2}) \cdot h(k_{2}) + \ldots + x(2-k_{n}) \cdot h(k_{n})\\
+\vdots\\
+x(n-k_{1}) \cdot h(k_{1}) + x(n-k_{2}) \cdot h(k_{2}) + \ldots + x(n-k_{n}) \cdot h(k_{n})
+\end{pmatrix}
+\]
+\[
+= \begin{pmatrix}
+(h*x)(1)\\
+(h*x)(2)\\
+\vdots\\
+(h*x)(n)
+\end{pmatrix}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\]
+
+\subsection*{(b)}
+
 \end{document}
