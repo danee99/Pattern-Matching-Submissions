@@ -33,7 +33,7 @@ function[] = functiona(Hz1, Hz2, N, l1, l2, amplitude1, amplitude2)
     b = ((amplitude2 * sin(2*pi*Hz2*k3)).*hann2);
     b2 = amplitude2 * sin(2*pi*Hz2*k4);
     
-    plot(k, a)
+    plot(k, a*0, 'r+', 'MarkerSize', 1, 'LineWidth', 3)
     hold on
     plot(k2, a2)
     plot(k2, hann, 'r+', 'MarkerSize', 1, 'LineWidth', 3)
@@ -41,12 +41,12 @@ function[] = functiona(Hz1, Hz2, N, l1, l2, amplitude1, amplitude2)
     plot(k3, b)
     plot(k3, hann2, 'r+', 'MarkerSize', 1, 'LineWidth', 3)
     hold on
-    plot(k4, b2)
+    plot(k4, b2*0, 'r+', 'MarkerSize', 1, 'LineWidth', 3)
     hold off
     grid
 
     %plot(k,output);
-    title('(a)');
+    title('(d)');
     xlabel('seconds'); 
     ylabel('amplitude');
 end

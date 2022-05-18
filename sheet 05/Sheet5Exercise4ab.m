@@ -32,7 +32,7 @@ function[] = functiona(Hz1, Hz2, N, l1, l2, amplitude1, amplitude2)
     grid
 
     %plot(k,output);
-    title('(a)');
+    title('(a), (b)');
     xlabel('seconds'); 
     ylabel('amplitude');
 end
