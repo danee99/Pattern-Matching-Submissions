@@ -1,17 +1,17 @@
 %sampling frequency
 N=5000;
 
-k3 = -2:1/N:-0.5;
+k2 = -1:1/N:-0.5;
 k=-0.5:1/N:0.5;
-k2 = 0.5:1/N:2;
+k3 = 0.5:1/N:1;
 
 hann = 1/2 * (1+cos(2*pi*k));
 
-plot(k3, 0*k3);
+plot(k2, 0*k2);
 hold on
 plot(k,hann);
 hold on
-plot(k2, 0*k2)
+plot(k3, 0*k3)
 hold off
 grid
 

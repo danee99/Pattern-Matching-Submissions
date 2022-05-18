@@ -12,7 +12,7 @@ l2 = 3;
 
 %amplitudes
 amplitude1 = 1;
-amplitude2 = 1;
+amplitude2 = 0.5;
 
 functiona(Hz1,Hz2,N, l1, l2, amplitude1, amplitude2);
 
