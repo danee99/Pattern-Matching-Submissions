@@ -5,12 +5,16 @@
 y=[1 3 2 0 1];
 x=[3 1 0 0 2];
 s = cyclic_convolution(x,y);
+x_a = length(s);
 %plots for c)
 subplot(1,2,1);
-plot(s);
+stem(s)
 title('cyclic convolution c)');
 xlabel('index');
 ylabel('value');
+xlim([0 length(s)+1]);
+ylim([0 max(s)+1]);
+
 
 %values for d)
 x2 = [1 3 2];
@@ -18,10 +22,13 @@ y2 = [2 3];
 s2 = cyclic_convolution(x2,y2);
 %plots for d)
 subplot(1,2,2);
-plot(s2)
+
+stem(s2)
 title('cyclic convolution d)');
 xlabel('index');
 ylabel('value');
+xlim([0 length(s2)+1]);
+ylim([0 max(s2)+1]);
 
 %function for the cylclic convolution of two vectors
 function[sol] = cyclic_convolution(x,y)
