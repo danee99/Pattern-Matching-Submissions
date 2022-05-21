@@ -34,18 +34,30 @@
 % --------------------------------------------------------------
 %                         Title Page
 % --------------------------------------------------------------
-\title{Solutions for Sheet 1}
+\title{Solutions for Sheet 6}
 \author{Raphael Wude, Martin Brückmann, Claude Jordan, Daniel Degenstein\\ \\
 \textsc{Pattern Matching and Machine Learning} \\
 \textsc{for Audio Signal Processing}}
 \maketitle
 
 % --------------------------------------------------------------
-%                         Task 1.1
+%                         Task 6.1
 % --------------------------------------------------------------
-\section*{Task 1.1}
-\begin{itemize}
-    \item[(a)]
-\end{itemize}
+\section*{Task 6.1}
+The time-shift operator $T^{k}$, $k \in \mathbb{Z}$ is defined as $T^{k}[x](n) = x^{k}(n) := x(n-k)$.\\\\
+A system $S$ is time invariant $\Leftrightarrow \forall k \in \mathbb{Z}, \forall x \in \ell^{p}(\mathbb{Z}): S[x^{k}]=S[x]^{k}$.
+
+\subsection*{(a)}
+The upsampling operator is defined as (${\uparrow}M)[x](n)=\Bigg\{\begin{array}{l} x(n/M), ~~~~~\text{if } M \text{ divides } n\text{,}\\ 0, ~~~~~~~~~~~~~~\text{otherwise.} \end{array}$\\\\\\
+$\Rightarrow$ (${\uparrow}M)[x^{k}](n)=\Bigg\{\begin{array}{l} x^{k}(n/M), ~~~~~\text{if } M \text{ divides } n\text{,}\\ 0, ~~~~~~~~~~~~~~~\text{otherwise.} \end{array}$\\\\\\
+$=\Bigg\{\begin{array}{l} x(n/M -k), ~~~~~\text{if } M \text{ divides } n\text{,}\\ 0, ~~~~~~~~~~~~~~~~~~~\text{otherwise.} \end{array}$\\\\\\
+$\neq$ (${\uparrow}M)[x]^{k}(n)=$(${\uparrow}M)[x](n-k)=\Bigg\{\begin{array}{l} x((n-k)/M), ~~~~~\text{if } M \text{ divides } (n-k)\text{,}\\ 0, ~~~~~~~~~~~~~~~~~~~~~\text{otherwise.} \end{array}$\\\\\\
+$\Rightarrow$ The upsampling operator is not time invariant.
+\newpage
+
+\subsection*{(b)}
+The frequency-shift operator is defined as $E_{w}[x](n):=e^{-2\pi iwn}x(n)$.\\\\
+$\Rightarrow E_{w}[x^{k}](n)=e^{-2\pi iwn}x^{k}(n) = e^{-2\pi iwn}x(n-k) \neq e^{-2\pi iw(n-k)}x(n-k) =$\\ $E_{w}[x](n-k) = E_{w}[x]^{k}(n)$\\\\
+$\Rightarrow$ The frequency-shift operator is not time invariant.
  
 \end{document}
