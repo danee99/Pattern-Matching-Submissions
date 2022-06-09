@@ -79,4 +79,35 @@
 
 \end{itemize}
 
+
+\section*{Task 7.2}
+- $p \in [0,1] =$ probability of a spectral peak to survive in a query audio fragment.\\
+- original document contains in each target zone exactly $F$ spectral peaks\\\\
+$E_{k} =$ the anchor point and at least $k$ target points survive\\\\
+$\Rightarrow P(E_{k}) = p \cdot P(X \geq k) = p \cdot (1-P(X < k)) = p \cdot (1 - \sum_{j=0}^{k-1} P(X = j))$\\\\
+We interpret the peak survival for a frame as a set of Bernoulli experiments. We have $F$ spectral peaks. Therefore we obtain the following binomial distribution:\\
+\[
+P(X = k) = \binom{F}{k}p^{k}(1-p)^{F-k}
+\]
+We can simplify the formular for $k=1$ and $k=2$.\\\\
+$k=1:$\\\\
+$\Rightarrow P(E_{1}) = p \cdot (1 - P(X=0))$\\\\
+$= p \cdot (1 - \binom{F}{0}p^{0}(1-p)^{F-0})$\\\\
+$= p \cdot (1 - 1 \cdot 1 \cdot (1-p)^{F})$\\\\
+$= p \cdot (1-(1-p)^{F})$\\\\
+$= p-p \cdot (1-p)^{F}$\\\\\\
+$k=2$\\\\
+$\Rightarrow P(E_{2}) = p \cdot (1-P(X=0) - P(X=1))$\\\\
+$= p \cdot (1 - \binom{F}{0}p^{0}(1-p)^{F-0}-\binom{F}{1}p^{1}(1-p)^{F-1})$\\\\
+$= p \cdot (1 - 1 \cdot 1 \cdot (1-p)^{F} - F \cdot p(1-p)^{F-1})$\\\\
+$= p \cdot (1 - (1 - p)^{F} - F \cdot p(1-p)^{F-1})$\\\\
+$= p - p(1-p)^{F} - F \cdot p^{2}(1-p)^{F-1}$\\\\\\
+The probability for $p = 0.5$, $F = 11$ and $k = 2$ is the following:\\\\
+$P(E_{2}) = p - p(1-p)^{F} - F \cdot p^{2}(1-p)^{F-1}$\\\\
+$= 0.5 - 0.5 \cdot 0.5^{11} - 11 \cdot 0.5^{2} \cdot 0.5^{10}$\\\\
+$= 0.5 - 0.5^{12} - 11 \cdot 0.5^{12} \approx 0.497$
+
+
+
+
 \end{document}
